@@ -97,7 +97,7 @@ def create_resnet_model(num_classes):
     model.fc = nn.Linear(num_features, num_classes)
     return model
 
-def train_model(model, train_loader, num_epochs=1):
+def train_model(model, train_loader, num_epochs=100):
     # Compute class weights
     y_train = [labels for _, labels in train_loader.dataset]
     class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(y_train), y=y_train)
