@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the code and data files into the container
 COPY . /app
-
+EXPOSE 8000
 # Install required packages
 RUN pip install pandas numpy scikit-learn opencv-python-headless matplotlib
 
